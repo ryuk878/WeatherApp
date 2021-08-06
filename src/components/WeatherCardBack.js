@@ -3,16 +3,13 @@ import { Accordion as OnzeAccordion } from "./accordion";
 import weatherBackground from "../Image/Amsterdam.jpg";
 
 export default function WeatherCardBackHtml({ weatherData }) {
-  const unixTime = 1210981217;
-  const date = new Date(unixTime*1000);
-  console.log(date.toLocaleDateString("en-US"));
 
-  
+const date = weatherData.daily[0].dt * 1000
   const dayInMillis = 24 * 60 * 60 * 1000;
   const weekDays = Array(7)
     .fill()
     .map((x, index) => index)
-    .map((index) => new Date(dayInMillis * index));
+    .map((index) => new Date(date + (dayInMillis * index)));
   return (
 
     <div className="weatherCard">
