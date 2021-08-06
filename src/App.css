@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  justify-content: space-evenly;
+}
+.weatherCard {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  width: 500px;
+  height: 900px;
+  border-radius: 50px 50px 50px 50px;
+  position: relative;
+  top: 50px;
+  left: 0;
+  border: 1px solid black;
+  box-shadow: 0px 17px 46px -10px;
+  overflow: hidden;
+  font-family: "Style Script", cursive;
+}
+.background-img {
+  width: 500px;
+  height: 900px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.85;
+  object-fit: fill;
+}
+.innerbox {
+  width: 350px;
+  height: 250px;
+  margin-top: 60px;
+  margin-left: 3vw;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 5) 0%,
+    rgba(255, 255, 255, 0.7) 0%
+  );
+  border-radius: 30px 30px 30px 30px;
+  padding-top: 9px;
+  font-family: sans-serif;
+}
+.innerbox > p {
+  padding-top: 10px;
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.innertext {
+  position: relative;
+  text-align: center;
+}
+
+.time {
+  font-family: sans-serif;
+}
+.innertext > h1 {
+  font-size: 70px;
+  text-shadow: 1px 1px 17px lightgrey;
+  position: relative;
+  color: black;
+}
+
+.graden {
+  font-size: 50px;
+  transform: translate(15px, -50px);
+  text-shadow: 1px 1px 17px white;
+  font-family: sans-serif;
+}
+
+
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.accordion-item {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+  max-height: 9999px;
+}
+
+.accordion-item.collapsed {
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-title {
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(12, 12, 12);
+  padding: 0.5em 1.5em;
+  border: solid 1px #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: rgba(246, 113, 52, 0.637);
+}
+.accordion-title::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: relative;
+}
+
+.accordion-title:hover,
+.accordion-title.open {
+  color: black;
+}
+
+.accordion-content {
+  position: relative;
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.637);
+}
+.accordionTitle {
+  font-family: sans-serif;
+  color: black;
+  position: relative;
+}
+.accordion-title > img {
+  width: 100px;
+}
+.react-card-front > button {
+  border: 1px solid black;
+}
+.front-flip-button {
+  z-index: 5;
+  position: relative;
+  margin-left: 200px;
+  font-weight: bold;
+  border-radius: 50px 50px 50px 50px;
+  background-color: rgba(246, 113, 52, 0.048);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+@media screen and (max-width: 414px) {
+  body {
+    justify-content: center;
+  }
+  .react-card-flip:nth-child(2) {
+    display: none;
+  }
+  .weatherCard {
+    width: 414px;
+    height: 896px;
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  .accordionTitle {
+    font-size: 18px;
+  }
+  .accordion-content {
+    font-size: 18px;
+  }
+  .front-flip-button {
+    right: 45px;
+    bottom: 40px;
+    }
+
+  .innertext {
+    left: 20px;
+  }
+  .title {
+    right: 20px;
+  }
+  .time {
+    margin-right: 30px;
+  }
+  .innertext > img {
+    margin-right: 40px;
+  }
+  .graden {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .react-card-flip:nth-child(2) {
+    display: none;
+  }
+  .weatherCard {
+    width: 375px;
+    height: 812px;
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+    top: 0;
+
+    overflow: hidden;
+    font-family: "Style Script", cursive;
+  }
+  .background-img {
+    width: 374px;
+  }
+  .accordionTitle {
+    font-size: 13px;
+  }
+  .front-flip-button {
+    right: 65px;
+    bottom: 40px;
+    }
+  .innerbox {
+    position: absolute;
+    right: 30px;
+  }
+  .innerbox {
+   top: 450px; 
+  }
+  .innertext > img {
+    margin-right: 25px;
+  }
+  .graden {
+    margin-right: 20px;
+  }
+}
+@media screen and (height: 736px) {
+  .weatherCard {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    width: 414px;
+    height: 736px;
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+    top: 0;
+
+    overflow: hidden;
+  }
+  .innerbox {
+    position: absolute;
+    top: 400px;
+  }
+  .front-flip-button { 
+    bottom: 25px;
+  }
+  .accordionTitle {
+    font-size: 13px;
+  }
+  .accordion-wrapper:nth-child(1) {
+    display: none;
+  }
+  .accordion-content {
+    font-size: 13px;
+  }
+}
+@media screen and (height: 667px) {
+  .weatherCard {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    width: 375px;
+    height: 667px;
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+    top: 0;
+
+    overflow: hidden;
+  }
+  .innerbox {
+    position: absolute;
+    top: 390px;
+    height: 200px;
+  }
+}
+
+@media screen and (width: 768px) {
+  .react-card-flip:nth-child(2) {
+    display: none;
+  }
+  .innerbox {
+    margin-left: 85px;
+  }
+}
+@media screen and (width: 1440px) {
+  .weatherCard {
+    top: 0px;
+  }
+  .App { 
+    max-height: 850px;
+  }
+  .background-img {
+  width: 500px;
+  height: 900px;
+  }
+  .innerbox {
+    margin-left: 85px;
+  }
+  .front-flip-button { 
+    bottom: 40px;
+  }
+  
+}
+@media screen and (width: 1280px) {
+  .weatherCard {
+    top: 0px;
+    width: 500px;
+    height: 800px;
+  }
+  .innerbox {
+    position: absolute;
+    margin-left: 85px;
+    top: 400px;
+  }
+  .front-flip-button {
+    position: relative; 
+    bottom: 40px;
+  }
+  .accordionTitle {
+    font-size: 18px;
+  }
+  .accordion-content {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .react-card-flip:nth-child(2) {
+    display: none;
+  }
+  .weatherCard {
+    top: 0px;
+    width: 360px;
+    height: 740px;
+  }
+  .innerbox {
+    position: absolute;
+    top: 400px;
+    right: 25px;
+  }
+}
